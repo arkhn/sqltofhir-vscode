@@ -1,65 +1,53 @@
-# dbtonfhir-vscode README
+# dbtonfhir-vscode
 
 This is the README for your extension "dbtonfhir-vscode". After writing up a brief description, we recommend including the following sections.
 
-## Features
+## How to install
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+To use the extension, you shall copy it in your `Users/{username}/.vscode/extensions/`, and reload VSCode.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to use 
 
-\!\[feature X\]\(images/feature-x.png\)
+In a sql file, every dbtonfhir command starts with the prefix `fhir`
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+`fhirbuildobject` to create: `json_build_object()`
 
-## Requirements
+`fhirbuildarray` to create: `json_build_array()`
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+`fhirselect` to create: 
+```
+SELECT
+    
+AS fhir
+FROM 
+```
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+`fhiridentifier` to create:
+```
+'identifier',
+json_build_array(
+    json_build_object(
+        'use', '',
+        'type', json_build_object(
+            'text', ,
+            'coding',
+            json_build_array(
+                json_build_object(
+                    'system', ,
+                    'version', ,
+                    'code', ,
+                    'display', ,
+                    'userSelected', 
+                )
+            ),
+        ),
+        'system', ,
+        'value', ,
+        'period', json_build_object(
+            'start', ,
+            'end', 
+        ),
+        assigner, ,
+    ),
+),
+```
