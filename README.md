@@ -20,7 +20,7 @@ AS fhir
 FROM 
 ```
 
-`fhiridentifier` to create:
+`fhir{datatype}` to create a datatype. For exemple, with `fhiridentifier`:
 ```
 'identifier',
 json_build_array(
