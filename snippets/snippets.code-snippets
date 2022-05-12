@@ -1,0 +1,478 @@
+{
+  "Create request dbtonfhir": {
+    "prefix": "fhirselect",
+    "description": "Write a sql select request",
+    "body": ["SELECT", "\t${2}", "AS fhir", "FROM ${1}", "\n"]
+  },
+
+  "Create build object": {
+    "prefix": "fhirbuildobject",
+    "description": "Creates an empty json_build_object",
+    "body": "json_build_object(${1})"
+  },
+  "Create build array": {
+    "prefix": "fhirbuildarray",
+    "description": "Creates an empty json_build_array",
+    "body": "json_build_array(${1})"
+  },
+
+  "Create identifier": {
+    "prefix": "fhiridentifier",
+    "description": "creates an empty identifier",
+    "body": [
+      "'identifier',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'use', ${1|'usual','official','temp','secondary','old'|},",
+      "\t\t'type', json_build_object(",
+      "\t\t\t'text', ${2},",
+      "\t\t\t'coding',",
+      "\t\t\tjson_build_array(",
+      "\t\t\t\tjson_build_object(",
+      "\t\t\t\t\t'system', ${3},",
+      "\t\t\t\t\t'version', ${4},",
+      "\t\t\t\t\t'code', ${5},",
+      "\t\t\t\t\t'display', ${6},",
+      "\t\t\t\t\t'userSelected', ${7}",
+      "\t\t\t\t)",
+      "\t\t\t),",
+      "\t\t),",
+      "\t\t'system', ${8},",
+      "\t\t'value', ${9},",
+      "\t\t'period', json_build_object(",
+      "\t\t\t'start', ${10},",
+      "\t\t\t'end', ${11}",
+      "\t\t),",
+      "\t\tassigner, ${12},",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create coding": {
+    "prefix": "fhircoding",
+    "description": "creates an empty coding",
+    "body": [
+      "'coding',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'system', ${1},",
+      "\t\t'version', ${2},",
+      "\t\t'code', ${3},",
+      "\t\t'display', ${4},",
+      "\t\t'userSelected', ${5}",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create ratio": {
+    "prefix": "fhirratio",
+    "description": "creates an empty ratio",
+    "body": [
+      "'ratio',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'numerator', json_build_object(",
+      "\t\t\t'value', ${1},",
+      "\t\t\t'comparator', ${2|'<','<=','>=','>','ad'|},",
+      "\t\t\t'unit', ${3},",
+      "\t\t\t'system', ${4},",
+      "\t\t\t'code', ${5},",
+      "\t\t),",
+      "\t\t'denominator', json_build_object(",
+      "\t\t\t'value', ${6},",
+      "\t\t\t'unit', ${7},",
+      "\t\t\t'system', ${8},",
+      "\t\t\t'code', ${9},",
+      "\t\t)",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create period": {
+    "prefix": "fhirperiod",
+    "description": "creates an empty period",
+    "body": [
+      "'period',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'start', ${1},",
+      "\t\t'end', ${2},",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create range": {
+    "prefix": "fhirrange",
+    "description": "creates an empty range",
+    "body": [
+      "'range',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'low', json_build_object(",
+      "\t\t\t'value', ${1},",
+      "\t\t\t'unit', ${2},",
+      "\t\t\t'system', ${3},",
+      "\t\t\t'code', ${4},",
+      "\t\t),",
+      "\t\t'high', json_build_object(",
+      "\t\t\t'value', ${5},",
+      "\t\t\t'unit', ${6},",
+      "\t\t\t'system', ${7},",
+      "\t\t\t'code', ${9},",
+      "\t\t)",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create ratioRange": {
+    "prefix": "fhirratioRange",
+    "description": "creates an empty ratioRange",
+    "body": [
+      "'ratioRange',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'lowNumerator', json_build_object(",
+      "\t\t\t'value', ${1},",
+      "\t\t\t'unit', ${2},",
+      "\t\t\t'system', ${3},",
+      "\t\t\t'code', ${4},",
+      "\t\t),",
+      "\t\t'highNumerator', json_build_object(",
+      "\t\t\t'value', ${5},",
+      "\t\t\t'unit', ${6},",
+      "\t\t\t'system', ${7},",
+      "\t\t\t'code', ${9},",
+      "\t\t),",
+      "\t\t'denominator', json_build_object(",
+      "\t\t\t'value', ${10},",
+      "\t\t\t'unit', ${11},",
+      "\t\t\t'system', ${12},",
+      "\t\t\t'code', ${13},",
+      "\t\t)",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create attachment": {
+    "prefix": "fhirattachment",
+    "description": "creates an empty attachment",
+    "body": [
+      "'attachment',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'contentType', ${1},",
+      "\t\t'language', ${2},",
+      "\t\t'data', ${3},",
+      "\t\t'url', ${4},",
+      "\t\t'size', ${5},",
+      "\t\t'hash', ${6},",
+      "\t\t'title', ${7},",
+      "\t\t'creation', ${8},",
+      "\t\t'height', ${9},",
+      "\t\t'width', ${10},",
+      "\t\t'frames', ${11},",
+      "\t\t'frames', ${12},",
+      "\t\t'pages', ${13},",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create annotation": {
+    "prefix": "fhirannotation",
+    "description": "creates an empty annotation",
+    "body": [
+      "'annotation',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'author[x]', ${1},",
+      "\t\t'time', ${2},",
+      "\t\t'text', ${3}",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create humanName": {
+    "prefix": "fhirhumanName",
+    "description": "creates an empty humanName",
+    "body": [
+      "'humanName',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'use', ${1|'usual','official','temp','nickname','anonymous','old','maiden'|},",
+      "\t\t'text', ${2},",
+      "\t\t'family', ${3},",
+      "\t\t'given', json_build_array(${4}),",
+      "\t\t'prefix', json_build_array(${5}),",
+      "\t\t'suffix', json_build_array(${6}),",
+      "\t\t'period', json_build_object(",
+      "\t\t\t'start', ${7},",
+      "\t\t\t'end', ${8},",
+      "\t\t)",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create codeableConcept": {
+    "prefix": "fhircodeableConcept",
+    "description": "creates an empty codeableConcept",
+    "body": [
+      "'codeableConcept',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'coding', json_build_array(",
+      "\t\t\tjson_build_object(",
+      "\t\t\t\t'system', ${1},",
+      "\t\t\t\t'version', ${2},",
+      "\t\t\t\t'code', ${3},",
+      "\t\t\t\t'display', ${4},",
+      "\t\t\t\t'userSelected', ${5}",
+      "\t\t\t),",
+      "\t\t'text', ${6}",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create timing": {
+    "prefix": "fhirtiming",
+    "description": "creates an empty timing",
+    "body": [
+      "'timing',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'event', json_build_array(${1}),",
+      "\t\t'repeat', json_build_object(",
+      "\t\t\t'count', ${2},",
+      "\t\t\t'countMax', ${3},",
+      "\t\t\t'duration', ${4},",
+      "\t\t\t'durationMax', ${5},",
+      "\t\t\t'durationUnit', ${6|'s','min','h','d','wk','mo','a'|},",
+      "\t\t\t'frequency', ${7},",
+      "\t\t\t'frequencyMax', ${8},",
+      "\t\t\t'period', ${9},",
+      "\t\t\t'periodMax', ${10},",
+      "\t\t\t'periodUnit', ${11|'s','min','h','d','wk','mo','a'|},",
+      "\t\t\t'dayOfWeek', json_build_object(${12|'mon','tue','wed','thu','fri','sat','sun'|}),",
+      "\t\t\t'timeOfDay', json_build_object(${13}),",
+      "\t\t\t'when', json_build_object(${14}),",
+      "\t\t\t'offset', ${15}",
+      "\t\t),",
+      "\t\t'code', ${16}",
+      "\t\t)",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create money": {
+    "prefix": "fhirmoney",
+    "description": "creates an empty money",
+    "body": [
+      "'money',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'currency', ${2}",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create address": {
+    "prefix": "fhiraddress",
+    "description": "creates an empty address",
+    "body": [
+      "'address',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'use', ${1|'home','work','temp','old','billing'|},",
+      "\t\t'type', ${2|'postal','physical','both'|},",
+      "\t\t'text', ${3},",
+      "\t\t'line', json_build_array(${3}),",
+      "\t\t'city', ${4},",
+      "\t\t'district', ${5},",
+      "\t\t'state', ${6},",
+      "\t\t'postalCode', ${7},",
+      "\t\t'country', ${8},",
+      "\t\t'period', json_build_object(",
+      "\t\t\t'start', ${10},",
+      "\t\t\t'end', ${11},",
+      "\t\t),",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create quantity": {
+    "prefix": "fhirquantity",
+    "description": "creates an empty quantity",
+    "body": [
+      "'quantity',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'comparator', ${2|'<','<=','>=','>','ad'|},",
+      "\t\t'unit', ${3},",
+      "\t\t'system', ${4},",
+      "\t\t'code', ${5}",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create simpleQuantity": {
+    "prefix": "fhirsimpleQuantity",
+    "description": "creates an empty simpleQuantity",
+    "body": [
+      "'simpleQuantity',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4}",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create moneyQuantity": {
+    "prefix": "fhirmoneyQuantity",
+    "description": "creates an empty moneyQuantity",
+    "body": [
+      "'moneyQuantity',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3}, --it SHALL be ISO 4217 (system = \"urn:iso:std:iso:4217\" - currency)",
+      "\t\t'code', ${4}, --There SHALL be a code if there is a value and it SHALL be an expression of currency",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create count": {
+    "prefix": "fhircount",
+    "description": "creates an empty count",
+    "body": [
+      "'count',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1}, -- if present, the value SHALL be a whole number",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
+      "\t\t'code', ${4}, -- there SHALL be a code with a value of \"1\" if there is a value",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create duration": {
+    "prefix": "fhirduration",
+    "description": "creates an empty duration",
+    "body": [
+      "'duration',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
+      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of time",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create distance": {
+    "prefix": "fhirdistance",
+    "description": "creates an empty distance",
+    "body": [
+      "'distance',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1},",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
+      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of length",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create age": {
+    "prefix": "fhirage",
+    "description": "creates an empty age",
+    "body": [
+      "'age',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'value', ${1}, -- if value is present, it SHALL be positive",
+      "\t\t'unit', ${2},",
+      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
+      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of time",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create sampledData": {
+    "prefix": "fhirsampledData",
+    "description": "creates an empty sampledData",
+    "body": [
+      "'sampledData',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'origin', json_build_object(",
+      "\t\t\t'value', ${1},",
+      "\t\t\t'comparator', ${2|'<','<=','>=','>','ad'|},",
+      "\t\t\t'unit', ${3},",
+      "\t\t\t'system', ${4},",
+      "\t\t\t'code', ${5}",
+      "\t\t),",
+      "\t\t'period', ${6},",
+      "\t\t'factor', ${7},",
+      "\t\t'lowerLimit', ${8},",
+      "\t\t'upperLimit', ${9},",
+      "\t\t'dimensions', ${10},",
+      "\t\t'data', ${11}",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create signature": {
+    "prefix": "fhirsignature",
+    "description": "creates an empty signature",
+    "body": [
+      "'signature',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'type',",
+      "\t\tjson_build_array(",
+      "\t\t\tjson_build_object(",
+      "\t\t\t\t'system', ${1},",
+      "\t\t\t\t'version', ${2},",
+      "\t\t\t\t'code', ${3},",
+      "\t\t\t\t'display', ${4},",
+      "\t\t\t\t'userSelected', ${5},",
+      "\t\t\t),",
+      "\t\t),",
+      "\t\t'when', ${6},",
+      "\t\t'who', ${7},",
+      "\t\t'onBehalfOf', ${8},",
+      "\t\t'targetFormat', ${9},",
+      "\t\t'sigFormat', ${10},",
+      "\t\t'data', ${11},",
+      "\t)",
+      "),"
+    ]
+  },
+  "Create contactPoint": {
+    "prefix": "fhircontactPoint",
+    "description": "creates an empty contactPoint",
+    "body": [
+      "'contactPoint',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'system', ${1|'phone','fax','email','pager','url','sms','other'|},",
+      "\t\t'value', ${2},",
+      "\t\t'use', ${3|'home','work','temp','old','mobile'|},",
+      "\t\t'rank', ${4},",
+      "\t\t'period', json_build_object(",
+      "\t\t\t'start', ${10},",
+      "\t\t\t'end', ${11}",
+      "\t\t)",
+      "\t),",
+      "),"
+    ]
+  }
+}
