@@ -25,7 +25,7 @@ FROM
 'identifier',
 json_build_array(
     json_build_object(
-        'use', '',
+        'use', ,
         'type', json_build_object(
             'text', ,
             'coding',
