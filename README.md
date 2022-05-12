@@ -1,7 +1,5 @@
 # dbtonfhir-vscode
 
-This is the README for your extension "dbtonfhir-vscode". After writing up a brief description, we recommend including the following sections.
-
 ## How to install
 
 To use the extension, you shall copy it in your `Users/{username}/.vscode/extensions/`, and reload VSCode.
