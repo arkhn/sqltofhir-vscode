@@ -1,0 +1,21 @@
+{
+    "name": "dbtonfhir-vscode",
+    "displayName": "dbtonfhir-vscode",
+    "description": "",
+    "publisher": "Arkhn",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "sql",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
