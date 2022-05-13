@@ -50,4 +50,4 @@ json_build_array(
 ),
 ```
 
-For any data type, make sure you write `fhir` in the suffix
+For any data type, make sure you write `fhir` in the prefix.
