@@ -59,8 +59,8 @@
       "\t\t'version', ${2},",
       "\t\t'code', ${3},",
       "\t\t'display', ${4},",
-      "\t\t'userSelected', ${5}",
-      "\t)",
+      "\t\t'userSelected', ${5},",
+      "\t),",
       "),"
     ]
   },
@@ -83,7 +83,7 @@
       "\t\t\t'unit', ${7},",
       "\t\t\t'system', ${8},",
       "\t\t\t'code', ${9},",
-      "\t\t)",
+      "\t\t),",
       "\t),",
       "),"
     ]
@@ -119,7 +119,7 @@
       "\t\t\t'unit', ${6},",
       "\t\t\t'system', ${7},",
       "\t\t\t'code', ${9},",
-      "\t\t)",
+      "\t\t),",
       "\t),",
       "),"
     ]
@@ -148,7 +148,7 @@
       "\t\t\t'unit', ${11},",
       "\t\t\t'system', ${12},",
       "\t\t\t'code', ${13},",
-      "\t\t)",
+      "\t\t),",
       "\t),",
       "),"
     ]
@@ -186,8 +186,8 @@
       "\tjson_build_object(",
       "\t\t'author[x]', ${1},",
       "\t\t'time', ${2},",
-      "\t\t'text', ${3}",
-      "\t)",
+      "\t\t'text', ${3},",
+      "\t),",
       "),"
     ]
   },
@@ -207,7 +207,7 @@
       "\t\t'period', json_build_object(",
       "\t\t\t'start', ${7},",
       "\t\t\t'end', ${8},",
-      "\t\t)",
+      "\t\t),",
       "\t),",
       "),"
     ]
@@ -225,10 +225,10 @@
       "\t\t\t\t'version', ${2},",
       "\t\t\t\t'code', ${3},",
       "\t\t\t\t'display', ${4},",
-      "\t\t\t\t'userSelected', ${5}",
+      "\t\t\t\t'userSelected', ${5},",
       "\t\t\t),",
-      "\t\t'text', ${6}",
-      "\t)",
+      "\t\t'text', ${6},",
+      "\t),",
       "),"
     ]
   },
@@ -254,11 +254,11 @@
       "\t\t\t'dayOfWeek', json_build_object(${12|'mon','tue','wed','thu','fri','sat','sun'|}),",
       "\t\t\t'timeOfDay', json_build_object(${13}),",
       "\t\t\t'when', json_build_object(${14}),",
-      "\t\t\t'offset', ${15}",
+      "\t\t\t'offset', ${15},",
       "\t\t),",
-      "\t\t'code', ${16}",
-      "\t\t)",
-      "\t)",
+      "\t\t'code', ${16},",
+      "\t\t),",
+      "\t),",
       "),"
     ]
   },
@@ -270,8 +270,8 @@
       "json_build_array(",
       "\tjson_build_object(",
       "\t\t'value', ${1},",
-      "\t\t'currency', ${2}",
-      "\t)",
+      "\t\t'currency', ${2},",
+      "\t),",
       "),"
     ]
   },
@@ -310,7 +310,7 @@
       "\t\t'comparator', ${2|'<','<=','>=','>','ad'|},",
       "\t\t'unit', ${3},",
       "\t\t'system', ${4},",
-      "\t\t'code', ${5}",
+      "\t\t'code', ${5},",
       "\t),",
       "),"
     ]
@@ -325,7 +325,7 @@
       "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
       "\t\t'system', ${3},",
-      "\t\t'code', ${4}",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
@@ -417,15 +417,15 @@
       "\t\t\t'comparator', ${2|'<','<=','>=','>','ad'|},",
       "\t\t\t'unit', ${3},",
       "\t\t\t'system', ${4},",
-      "\t\t\t'code', ${5}",
+      "\t\t\t'code', ${5},",
       "\t\t),",
       "\t\t'period', ${6},",
       "\t\t'factor', ${7},",
       "\t\t'lowerLimit', ${8},",
       "\t\t'upperLimit', ${9},",
       "\t\t'dimensions', ${10},",
-      "\t\t'data', ${11}",
-      "\t)",
+      "\t\t'data', ${11},",
+      "\t),",
       "),"
     ]
   },
@@ -452,7 +452,7 @@
       "\t\t'targetFormat', ${9},",
       "\t\t'sigFormat', ${10},",
       "\t\t'data', ${11},",
-      "\t)",
+      "\t),",
       "),"
     ]
   },
@@ -469,8 +469,8 @@
       "\t\t'rank', ${4},",
       "\t\t'period', json_build_object(",
       "\t\t\t'start', ${10},",
-      "\t\t\t'end', ${11}",
-      "\t\t)",
+      "\t\t\t'end', ${11},",
+      "\t\t),",
       "\t),",
       "),"
     ]
