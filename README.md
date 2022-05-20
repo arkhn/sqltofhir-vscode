@@ -35,7 +35,7 @@ json_build_array(
                     'version', ,
                     'code', ,
                     'display', ,
-                    'userSelected', 
+                    'userSelected', , 
                 )
             ),
         ),
@@ -45,7 +45,7 @@ json_build_array(
             'start', ,
             'end', 
         ),
-        assigner, ,
+        'assigner', ,
     ),
 ),
 ```
