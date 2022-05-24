@@ -14,15 +14,7 @@
     "snippets": [
       {
         "language": "sql",
-        "path": "./snippets/DBTONFHIR_commands.json"
-      },
-      {
-        "language": "sql",
-        "path": "./snippets/DBTONFHIR_generalPurposeData-types.json"
-      },
-      {
-        "language": "sql",
-        "path": "./snippets/DBTONFHIR_specialPurposeData-types.json"
+        "path": "./snippets/*.json"
       }
     ]
   }
