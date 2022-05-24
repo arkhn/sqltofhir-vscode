@@ -6,4 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.0.1] - 2022-20-06
+
+### Added
+
+- all general purpose fhir data-types snippets
+- general sql snippets commands for dbtonfhir
