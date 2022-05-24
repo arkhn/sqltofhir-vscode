@@ -71,7 +71,9 @@ json_build_object(
 )
 ```
 
-## General commands
+## Snippets
+
+### General commands
 
 | Command name    | Utility                         |
 | --------------- | ------------------------------- |
@@ -79,7 +81,7 @@ json_build_object(
 | fhirbuildobject | creates a `fhir_build_object()` |
 | fhirbuildarray  | creates a `fhir_build_array()`  |
 
-## General-purpose data-types
+### General-purpose data-types
 
 | Command name        | Data-type                                                                  |
 | ------------------- | -------------------------------------------------------------------------- |
@@ -107,16 +109,16 @@ json_build_object(
 | fhirsignature       | [Signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
 | fhircontactPoint    | [ContactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
 
-##### \* Defined Variations on Quantity
+###### \* Defined Variations on Quantity
 
-## Special Purposed Data-Types
+### Special Purposed Data-Types
 
 | Command name  | Data-type                                                          |
 | ------------- | ------------------------------------------------------------------ |
 | fhirExtension | [Extension](https://www.hl7.org/fhir/extensibility.html#Extension) |
 | fhirMeta      | [Meta](https://www.hl7.org/fhir/resource.html#Meta)                |
 
-## DBT On Fhir References
+### DBT On Fhir References
 
 | Command name   | Data-type |
 | -------------- | --------- |
