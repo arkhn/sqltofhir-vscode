@@ -14,4 +14,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - general sql snippets commands for dbtonfhir
 
 [Unreleased]
+
 [0.0.1] https://github.com/arkhn/dbtonfhir-vscode/pull/4
