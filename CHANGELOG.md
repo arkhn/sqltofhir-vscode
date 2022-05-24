@@ -12,3 +12,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - all general purpose fhir data-types snippets
 - general sql snippets commands for dbtonfhir
+
+[Unreleased]
+[0.0.1] https://github.com/arkhn/dbtonfhir-vscode/pull/4
