@@ -111,7 +111,7 @@ json_build_object(
 
 ###### \* Defined Variations on Quantity
 
-### Special Purposed Data-Types
+### Special Purpose Data-Types
 
 | Command name  | Data-type                                                          |
 | ------------- | ------------------------------------------------------------------ |
