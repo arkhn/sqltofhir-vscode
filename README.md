@@ -1,6 +1,12 @@
 # dbtonfhir-vscode
 
-VSCode snippet package for dbtonfhir(r) 
+VSCode snippet package for writing sql queries with dbtonfhir(r) 
+
+## dbtonfhir-vscode
+
+Provides snippets for easily writing the FHIR sql queries with dbtonfhir(r)
+
+Each snipet corresponds to a general-purpose FHIR datatype or to a dbtonfhir function.
 
 
 ## How to install
