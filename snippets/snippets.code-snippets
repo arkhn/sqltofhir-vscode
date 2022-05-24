@@ -339,8 +339,8 @@
       "\tjson_build_object(",
       "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
-      "\t\t'system', ${3}, --it SHALL be ISO 4217 (system = \"urn:iso:std:iso:4217\" - currency)",
-      "\t\t'code', ${4}, --There SHALL be a code if there is a value and it SHALL be an expression of currency",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
@@ -352,10 +352,10 @@
       "'count',",
       "json_build_array(",
       "\tjson_build_object(",
-      "\t\t'value', ${1}, -- if present, the value SHALL be a whole number",
+      "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
-      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
-      "\t\t'code', ${4}, -- there SHALL be a code with a value of \"1\" if there is a value",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
@@ -369,8 +369,8 @@
       "\tjson_build_object(",
       "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
-      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
-      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of time",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
@@ -384,8 +384,8 @@
       "\tjson_build_object(",
       "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
-      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
-      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of length",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
@@ -397,10 +397,10 @@
       "'age',",
       "json_build_array(",
       "\tjson_build_object(",
-      "\t\t'value', ${1}, -- if value is present, it SHALL be positive",
+      "\t\t'value', ${1},",
       "\t\t'unit', ${2},",
-      "\t\t'system', ${3}, -- if system is present, it SHALL be UCUM",
-      "\t\t'code', ${4}, -- there SHALL be a code if there is a value and it SHALL be an expression of time",
+      "\t\t'system', ${3},",
+      "\t\t'code', ${4},",
       "\t),",
       "),"
     ]
