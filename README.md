@@ -1,5 +1,8 @@
 # dbtonfhir-vscode
 
+VSCode snippet package for dbtonfhir(r) 
+
+
 ## How to install
 
 To use the extension, you shall copy it in your `Users/{username}/.vscode/extensions/`, and reload VSCode.
