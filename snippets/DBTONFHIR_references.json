@@ -1,0 +1,14 @@
+{
+  "Create request dbtonfhir": {
+    "prefix": "fhirRefsubject",
+    "description": "Write a subject reference",
+    "body": [
+      "'subject',",
+      "json_build_object(",
+      "\t${1},",
+      "\t${2},",
+      "\t${3} :: TEXT",
+      ")"
+    ]
+  }
+}
