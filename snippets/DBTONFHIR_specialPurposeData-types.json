@@ -1,0 +1,48 @@
+{
+  "Create extension": {
+    "prefix": "fhirextension",
+    "description": "creates an empty extension",
+    "body": [
+      "'extension',",
+      "json_build_array(",
+      "\tjson_build_object(",
+      "\t\t'url', ${1}",
+      "\t\t'value[x]', json_build_array(${2}),",
+      "\t\t'security',",
+      "\t\tjson_build_array(",
+      "\t\t\tjson_build_object(",
+      "\t\t\t\t'system', ${3},",
+      "\t\t\t\t'version', ${4},",
+      "\t\t\t\t'code', ${5},",
+      "\t\t\t\t'display', ${6},",
+      "\t\t\t\t'userSelected', ${7},",
+      "\t\t\t),",
+      "\t\t),",
+      "\t\t'tag',",
+      "\t\tjson_build_array(",
+      "\t\t\tjson_build_object(",
+      "\t\t\t\t'system', ${8},",
+      "\t\t\t\t'version', ${9},",
+      "\t\t\t\t'code', ${10},",
+      "\t\t\t\t'display', ${11},",
+      "\t\t\t\t'userSelected', ${12},",
+      "\t\t\t),",
+      "\t\t),",
+      "\t\t'profile', ${13}",
+      "\t),",
+      "),"
+    ]
+  },
+  "Create meta": {
+    "prefix": "fhirmeta",
+    "description": "creates an empty meta",
+    "body": [
+      "'meta',",
+      "json_build_object(",
+      "\t'versionId', ${1}",
+      "\t'lastUpdated', ${2},",
+      "\t'source', ${3},",
+      "),"
+    ]
+  }
+}

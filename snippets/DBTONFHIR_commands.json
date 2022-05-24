@@ -1,0 +1,17 @@
+{
+  "Create request dbtonfhir": {
+    "prefix": "fhirselect",
+    "description": "Write a sql select request",
+    "body": ["SELECT", "\t${2}", "AS fhir", "FROM ${1}", "\n"]
+  },
+  "Create build object": {
+    "prefix": "fhirbuildobject",
+    "description": "Creates an empty json_build_object",
+    "body": "json_build_object(${1})"
+  },
+  "Create build array": {
+    "prefix": "fhirbuildarray",
+    "description": "Creates an empty json_build_array",
+    "body": "json_build_array(${1})"
+  }
+}
