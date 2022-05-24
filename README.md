@@ -1,25 +1,41 @@
 # dbtonfhir-vscode
 
+VSCode snippet package for writing sql queries with dbtonfhir(r) 
+&nbsp;  
+&nbsp;  
+## dbtonfhir-vscode
+
+Provides snippets for easily writing the FHIR sql queries with dbtonfhir(r)
+
+Each snipet corresponds to a general-purpose FHIR datatype or to a dbtonfhir function.
+&nbsp;  
+&nbsp;  
 ## How to install
 
 To use the extension, you shall copy it in your `Users/{username}/.vscode/extensions/`, and reload VSCode.
-
+&nbsp;  
+&nbsp;  
 ## How to use
 
 In a sql file, every dbtonfhir command starts with the prefix `fhir`.
 
+!!! ADD VIDEO  :)
+&nbsp;  
+&nbsp;  
 `fhirbuildobject`:
 
 ```sql
 json_build_object()
 ```
-
+&nbsp;  
+&nbsp;
 `fhirbuildarray`:
 
 ```sql
 json_build_array()
 ```
-
+&nbsp;  
+&nbsp;
 `fhirselect`:
 
 ```sql
@@ -28,7 +44,8 @@ SELECT
 AS fhir
 FROM
 ```
-
+&nbsp;  
+&nbsp; 
 `fhir{datatype}` to create a datatype. For exemple, with `fhiridentifier`:
 
 ```sql
@@ -70,18 +87,18 @@ json_build_object(
      :: TEXT
 )
 ```
-
+&nbsp;
 ## Snippets
 
-### General commands
+### General dbtonfhir commands
 
 | Command name    | Utility                         |
 | --------------- | ------------------------------- |
 | fhirselect      | creates a sql SELECT request    |
 | fhirbuildobject | creates a `fhir_build_object()` |
 | fhirbuildarray  | creates a `fhir_build_array()`  |
-
-### General-purpose data-types
+&nbsp;
+### FHIR general-purpose data-types
 
 | Command name        | Data-type                                                                  |
 | ------------------- | -------------------------------------------------------------------------- |
@@ -109,16 +126,16 @@ json_build_object(
 | fhirsignature       | [Signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
 | fhircontactPoint    | [ContactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
 
-###### \* Defined Variations on Quantity
-
-### Special Purpose Data-Types
+###### \* Defined variations on quantity
+&nbsp;  
+### FHIR special purpose data-types
 
 | Command name  | Data-type                                                          |
 | ------------- | ------------------------------------------------------------------ |
 | fhirExtension | [Extension](https://www.hl7.org/fhir/extensibility.html#Extension) |
 | fhirMeta      | [Meta](https://www.hl7.org/fhir/resource.html#Meta)                |
-
-### DBT On Fhir References
+&nbsp;
+### dbtonfhir Functions
 
 | Command name   | Data-type |
 | -------------- | --------- |
