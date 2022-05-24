@@ -81,28 +81,30 @@ json_build_object(
 
 ## General-purpose data-types
 
-| Command name        | Utility         |
-| ------------------- | --------------- |
-| fhiridentifier      | identifier      |
-| fhircoding          | coding          |
-| fhirratio           | ratio           |
-| fhirperiod          | period          |
-| fhirrange           | range           |
-| fhirratioRange      | ratioRange      |
-| fhirattachement     | attachement     |
-| fhirannotation      | annotation      |
-| fhirhumanName       | humanName       |
-| fhircodeableConcept | codeableConcept |
-| fhirtiming          | timing          |
-| fhirmoney           | money           |
-| fhiraddress         | address         |
-| fhirquantity        | quantity        |
-| fhirsimpleQuantity  | simpleQuantity  |
-| fhirmoneyQuantity   | moneyQuantity   |
-| fhircount           | count           |
-| fhirduration        | duration        |
-| fhirdistance        | distance        |
-| fhirage             | age             |
-| fhirsampledData     | sampledData     |
-| fhirsignature       | signature       |
-| fhircontactPoint    | contactPoint    |
+| Command name        | Data-type                                                                  |
+| ------------------- | -------------------------------------------------------------------------- |
+| fhiridentifier      | [identifier](https://www.hl7.org/fhir/datatypes.html#Identifier)           |
+| fhircoding          | [coding](https://www.hl7.org/fhir/datatypes.html#Coding)                   |
+| fhirratio           | [ratio](https://www.hl7.org/fhir/datatypes.html#Ratio)                     |
+| fhirperiod          | [period](https://www.hl7.org/fhir/datatypes.html#Period)                   |
+| fhirrange           | [range](https://www.hl7.org/fhir/datatypes.html#Range)                     |
+| fhirratioRange      | [ratioRange](https://www.hl7.org/fhir/datatypes.html#RatioRange)           |
+| fhirattachement     | [attachement](https://www.hl7.org/fhir/datatypes.html#Attachement)         |
+| fhirannotation      | [annotation](https://www.hl7.org/fhir/datatypes.html#Annotation)           |
+| fhirhumanName       | [humanName](https://www.hl7.org/fhir/datatypes.html#HumanName)             |
+| fhircodeableConcept | [codeableConcept](https://www.hl7.org/fhir/datatypes.html#CodeableConcept) |
+| fhirtiming          | [timing](https://www.hl7.org/fhir/datatypes.html#Timing)                   |
+| fhirmoney           | [money](https://www.hl7.org/fhir/datatypes.html#Money)                     |
+| fhiraddress         | [address](https://www.hl7.org/fhir/datatypes.html#Address)                 |
+| fhirquantity        | [quantity](https://www.hl7.org/fhir/datatypes.html#Quantity)               |
+| fhirsimpleQuantity  | [simpleQuantity](https://www.hl7.org/fhir/datatypes.html#SimpleQuantity)\* |
+| fhirmoneyQuantity   | [moneyQuantity](https://www.hl7.org/fhir/datatypes.html#MoneyQuantity)\*   |
+| fhircount           | [count](https://www.hl7.org/fhir/datatypes.html#Count)\*                   |
+| fhirduration        | [duration](https://www.hl7.org/fhir/datatypes.html#Duration)\*             |
+| fhirdistance        | [distance](https://www.hl7.org/fhir/datatypes.html#Distance)\*             |
+| fhirage             | [age](https://www.hl7.org/fhir/datatypes.html#Age)\*                       |
+| fhirsampledData     | [sampledData](https://www.hl7.org/fhir/datatypes.html#SampledData)         |
+| fhirsignature       | [signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
+| fhircontactPoint    | [contactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
+
+##### \* Defined Variations on Quantity
