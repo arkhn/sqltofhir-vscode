@@ -83,28 +83,41 @@ json_build_object(
 
 | Command name        | Data-type                                                                  |
 | ------------------- | -------------------------------------------------------------------------- |
-| fhiridentifier      | [identifier](https://www.hl7.org/fhir/datatypes.html#Identifier)           |
-| fhircoding          | [coding](https://www.hl7.org/fhir/datatypes.html#Coding)                   |
-| fhirratio           | [ratio](https://www.hl7.org/fhir/datatypes.html#Ratio)                     |
-| fhirperiod          | [period](https://www.hl7.org/fhir/datatypes.html#Period)                   |
-| fhirrange           | [range](https://www.hl7.org/fhir/datatypes.html#Range)                     |
-| fhirratioRange      | [ratioRange](https://www.hl7.org/fhir/datatypes.html#RatioRange)           |
-| fhirattachement     | [attachement](https://www.hl7.org/fhir/datatypes.html#Attachement)         |
-| fhirannotation      | [annotation](https://www.hl7.org/fhir/datatypes.html#Annotation)           |
-| fhirhumanName       | [humanName](https://www.hl7.org/fhir/datatypes.html#HumanName)             |
-| fhircodeableConcept | [codeableConcept](https://www.hl7.org/fhir/datatypes.html#CodeableConcept) |
-| fhirtiming          | [timing](https://www.hl7.org/fhir/datatypes.html#Timing)                   |
-| fhirmoney           | [money](https://www.hl7.org/fhir/datatypes.html#Money)                     |
-| fhiraddress         | [address](https://www.hl7.org/fhir/datatypes.html#Address)                 |
-| fhirquantity        | [quantity](https://www.hl7.org/fhir/datatypes.html#Quantity)               |
-| fhirsimpleQuantity  | [simpleQuantity](https://www.hl7.org/fhir/datatypes.html#SimpleQuantity)\* |
-| fhirmoneyQuantity   | [moneyQuantity](https://www.hl7.org/fhir/datatypes.html#MoneyQuantity)\*   |
-| fhircount           | [count](https://www.hl7.org/fhir/datatypes.html#Count)\*                   |
-| fhirduration        | [duration](https://www.hl7.org/fhir/datatypes.html#Duration)\*             |
-| fhirdistance        | [distance](https://www.hl7.org/fhir/datatypes.html#Distance)\*             |
-| fhirage             | [age](https://www.hl7.org/fhir/datatypes.html#Age)\*                       |
-| fhirsampledData     | [sampledData](https://www.hl7.org/fhir/datatypes.html#SampledData)         |
-| fhirsignature       | [signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
-| fhircontactPoint    | [contactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
+| fhiridentifier      | [Identifier](https://www.hl7.org/fhir/datatypes.html#Identifier)           |
+| fhircoding          | [Coding](https://www.hl7.org/fhir/datatypes.html#Coding)                   |
+| fhirratio           | [Ratio](https://www.hl7.org/fhir/datatypes.html#Ratio)                     |
+| fhirperiod          | [Period](https://www.hl7.org/fhir/datatypes.html#Period)                   |
+| fhirrange           | [Range](https://www.hl7.org/fhir/datatypes.html#Range)                     |
+| fhirratioRange      | [RatioRange](https://www.hl7.org/fhir/datatypes.html#RatioRange)           |
+| fhirattachement     | [Attachement](https://www.hl7.org/fhir/datatypes.html#Attachement)         |
+| fhirannotation      | [Annotation](https://www.hl7.org/fhir/datatypes.html#Annotation)           |
+| fhirhumanName       | [HumanName](https://www.hl7.org/fhir/datatypes.html#HumanName)             |
+| fhircodeableConcept | [CodeableConcept](https://www.hl7.org/fhir/datatypes.html#CodeableConcept) |
+| fhirtiming          | [Timing](https://www.hl7.org/fhir/datatypes.html#Timing)                   |
+| fhirmoney           | [Money](https://www.hl7.org/fhir/datatypes.html#Money)                     |
+| fhiraddress         | [Address](https://www.hl7.org/fhir/datatypes.html#Address)                 |
+| fhirquantity        | [Quantity](https://www.hl7.org/fhir/datatypes.html#Quantity)               |
+| fhirsimpleQuantity  | [SimpleQuantity](https://www.hl7.org/fhir/datatypes.html#SimpleQuantity)\* |
+| fhirmoneyQuantity   | [MoneyQuantity](https://www.hl7.org/fhir/datatypes.html#MoneyQuantity)\*   |
+| fhircount           | [Count](https://www.hl7.org/fhir/datatypes.html#Count)\*                   |
+| fhirduration        | [Duration](https://www.hl7.org/fhir/datatypes.html#Duration)\*             |
+| fhirdistance        | [Distance](https://www.hl7.org/fhir/datatypes.html#Distance)\*             |
+| fhirage             | [Age](https://www.hl7.org/fhir/datatypes.html#Age)\*                       |
+| fhirsampledData     | [SampledData](https://www.hl7.org/fhir/datatypes.html#SampledData)         |
+| fhirsignature       | [Signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
+| fhircontactPoint    | [ContactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
 
 ##### \* Defined Variations on Quantity
+
+## Special Purposed Data-Types
+
+| Command name  | Data-type                                                          |
+| ------------- | ------------------------------------------------------------------ |
+| fhirExtension | [Extension](https://www.hl7.org/fhir/extensibility.html#Extension) |
+| fhirMeta      | [Meta](https://www.hl7.org/fhir/resource.html#Meta)                |
+
+## DBT On Fhir References
+
+| Command name   | Data-type |
+| -------------- | --------- |
+| fhirRefsubject | Subject   |
