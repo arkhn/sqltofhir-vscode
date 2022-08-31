@@ -1,30 +1,30 @@
 # sqltofhir
 
-Visual Studio Code extension for writing FHIR resources with SQL.  
+Visual Studio Code extension for writing FHIR resources with SQL.
 
 ## sqltofhir
 
 Provides snippets for easily writing FHIR resources with SQL queries.
-Each snippet corresponds to a FHIR datatype.  
+Each snippet corresponds to a FHIR datatype.
 
 ## How to use
 
 In a SQL file, every command starts with the prefix `fhir`.
 
-<https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-85b7-39dca83a3f2a.mp4>
-  
+![how to use](./assets/videopresentation.gif)
+
 `fhirbuildobject`:
 
 ```sql
 json_build_object()
 ```
-  
+
 `fhirbuildarray`:
 
 ```sql
 json_build_array()
 ```
-  
+
 `fhirselect`:
 
 ```sql
@@ -33,7 +33,7 @@ SELECT
 AS fhir
 FROM
 ```
-  
+
 `fhir{datatype}` to create a datatype. For exemple, with `fhiridentifier`:
 
 ```sql
