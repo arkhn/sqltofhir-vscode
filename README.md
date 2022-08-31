@@ -1,40 +1,30 @@
-# dbtonfhir-vscode
+# sqltofhir
 
-VSCode snippet package for writing FHIR resources with sql.
-&nbsp;  
-&nbsp;
+Visual Studio Code extension for writing FHIR resources with SQL.  
 
-## dbtonfhir-vscode
+## sqltofhir
 
-Provides snippets for easily writing FHIR resources with sql queries.
-Each snipet corresponds to a general-purpose FHIR datatype or to a dbtonfhir function.
-&nbsp;  
-&nbsp;
+Provides snippets for easily writing FHIR resources with SQL queries.
+Each snippet corresponds to a FHIR datatype.  
 
 ## How to use
 
-In a sql file, every dbtonfhir command starts with the prefix `fhir`.
+In a SQL file, every command starts with the prefix `fhir`.
 
-https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-85b7-39dca83a3f2a.mp4
-
-&nbsp;  
-&nbsp;  
+<https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-85b7-39dca83a3f2a.mp4>
+  
 `fhirbuildobject`:
 
 ```sql
 json_build_object()
 ```
-
-&nbsp;  
-&nbsp;
+  
 `fhirbuildarray`:
 
 ```sql
 json_build_array()
 ```
-
-&nbsp;  
-&nbsp;
+  
 `fhirselect`:
 
 ```sql
@@ -43,9 +33,7 @@ SELECT
 AS fhir
 FROM
 ```
-
-&nbsp;  
-&nbsp;
+  
 `fhir{datatype}` to create a datatype. For exemple, with `fhiridentifier`:
 
 ```sql
@@ -88,19 +76,15 @@ json_build_object(
 )
 ```
 
-&nbsp;
-
 ## Snippets
 
-### General dbtonfhir commands
+### General sqltofhir commands
 
 | Command name    | Utility                         |
 | --------------- | ------------------------------- |
 | fhirselect      | creates a sql SELECT request    |
 | fhirbuildobject | creates a `fhir_build_object()` |
 | fhirbuildarray  | creates a `fhir_build_array()`  |
-
-&nbsp;
 
 ### FHIR general-purpose data-types
 
@@ -130,9 +114,9 @@ json_build_object(
 | fhirsignature       | [Signature](https://www.hl7.org/fhir/datatypes.html#Signature)             |
 | fhircontactPoint    | [ContactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
 
-###### \* Defined variations on quantity
+##### \* Defined variations on quantity
 
-&nbsp;
+<Br/>
 
 ### FHIR special purpose data-types
 
@@ -141,9 +125,9 @@ json_build_object(
 | fhirExtension | [Extension](https://www.hl7.org/fhir/extensibility.html#Extension) |
 | fhirMeta      | [Meta](https://www.hl7.org/fhir/resource.html#Meta)                |
 
-&nbsp;
+<Br/>
 
-### dbtonfhir Functions
+### sqltofhir functions [arkhn](https://arkhn.com)
 
 | Command name   | Data-type |
 | -------------- | --------- |
