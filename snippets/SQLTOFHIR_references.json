@@ -1,5 +1,5 @@
 {
-  "Create request dbtonfhir": {
+  "Create request sqltofhir": {
     "prefix": "fhirRefsubject",
     "description": "Write a subject reference",
     "body": [

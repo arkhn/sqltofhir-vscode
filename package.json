@@ -1,6 +1,6 @@
 {
-  "name": "dbtonfhir-vscode",
-  "displayName": "dbtonfhir-vscode",
+  "name": "sqltofhir-vscode",
+  "displayName": "sqltofhir-vscode",
   "description": "",
   "publisher": "Arkhn",
   "version": "1.0.0",
@@ -14,19 +14,19 @@
     "snippets": [
       {
         "language": "sql",
-        "path": "./snippets/DBTONFHIR_commands.json"
+        "path": "./snippets/SQLTOFHIR_commands.json"
       },
       {
         "language": "sql",
-        "path": "./snippets/DBTONFHIR_references.json"
+        "path": "./snippets/SQLTOFHIR_references.json"
       },
       {
         "language": "sql",
-        "path": "./snippets/DBTONFHIR_generalPurposeData-types.json"
+        "path": "./snippets/SQLTOFHIR_generalPurposeData-types.json"
       },
       {
         "language": "sql",
-        "path": "./snippets/DBTONFHIR_specialPurposeData-types.json"
+        "path": "./snippets/SQLTOFHIR_specialPurposeData-types.json"
       }
     ]
   }

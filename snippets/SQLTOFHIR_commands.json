@@ -1,5 +1,5 @@
 {
-  "Create request dbtonfhir": {
+  "Create request sqltofhir": {
     "prefix": "fhirselect",
     "description": "Write a sql select request",
     "body": ["SELECT", "\t${2}", "AS fhir", "FROM ${1}", "\n"]
