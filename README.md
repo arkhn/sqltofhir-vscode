@@ -2,13 +2,14 @@
 
 VSCode snippet package for writing FHIR resources with sql.
 &nbsp;  
-&nbsp;  
+&nbsp;
+
 ## dbtonfhir-vscode
 
 Provides snippets for easily writing FHIR resources with sql queries.
 Each snipet corresponds to a general-purpose FHIR datatype or to a dbtonfhir function.
 &nbsp;  
-&nbsp;  
+&nbsp;
 
 ## How to use
 
@@ -23,6 +24,7 @@ https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-
 ```sql
 json_build_object()
 ```
+
 &nbsp;  
 &nbsp;
 `fhirbuildarray`:
@@ -30,6 +32,7 @@ json_build_object()
 ```sql
 json_build_array()
 ```
+
 &nbsp;  
 &nbsp;
 `fhirselect`:
@@ -40,8 +43,9 @@ SELECT
 AS fhir
 FROM
 ```
+
 &nbsp;  
-&nbsp; 
+&nbsp;
 `fhir{datatype}` to create a datatype. For exemple, with `fhiridentifier`:
 
 ```sql
@@ -83,7 +87,9 @@ json_build_object(
      :: TEXT
 )
 ```
+
 &nbsp;
+
 ## Snippets
 
 ### General dbtonfhir commands
@@ -93,7 +99,9 @@ json_build_object(
 | fhirselect      | creates a sql SELECT request    |
 | fhirbuildobject | creates a `fhir_build_object()` |
 | fhirbuildarray  | creates a `fhir_build_array()`  |
+
 &nbsp;
+
 ### FHIR general-purpose data-types
 
 | Command name        | Data-type                                                                  |
@@ -123,14 +131,18 @@ json_build_object(
 | fhircontactPoint    | [ContactPoint](https://www.hl7.org/fhir/datatypes.html#ContactPoint)       |
 
 ###### \* Defined variations on quantity
-&nbsp;  
+
+&nbsp;
+
 ### FHIR special purpose data-types
 
 | Command name  | Data-type                                                          |
 | ------------- | ------------------------------------------------------------------ |
 | fhirExtension | [Extension](https://www.hl7.org/fhir/extensibility.html#Extension) |
 | fhirMeta      | [Meta](https://www.hl7.org/fhir/resource.html#Meta)                |
+
 &nbsp;
+
 ### dbtonfhir Functions
 
 | Command name   | Data-type |
