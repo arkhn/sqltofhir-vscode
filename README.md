@@ -1,29 +1,20 @@
 # dbtonfhir-vscode
 
-VSCode snippet package for writing sql queries with dbtonfhir(r) 
+VSCode snippet package for writing FHIR resources with sql.
 &nbsp;  
 &nbsp;  
 ## dbtonfhir-vscode
 
-Provides snippets for easily writing the FHIR sql queries with dbtonfhir(r)
-
+Provides snippets for easily writing FHIR resources with sql queries.
 Each snipet corresponds to a general-purpose FHIR datatype or to a dbtonfhir function.
 &nbsp;  
 &nbsp;  
-## How to install
 
-To use the extension, you shall copy it in your `Users/{username}/.vscode/extensions/`, and reload VSCode.
-&nbsp;  
-&nbsp;  
 ## How to use
 
 In a sql file, every dbtonfhir command starts with the prefix `fhir`.
 
-
-
 https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-85b7-39dca83a3f2a.mp4
-
-
 
 &nbsp;  
 &nbsp;  
