@@ -19,9 +19,10 @@ To use the extension, you shall copy it in your `Users/{username}/.vscode/extens
 
 In a sql file, every dbtonfhir command starts with the prefix `fhir`.
 
-!!! ADD VIDEO  :)
 
-https://user-images.githubusercontent.com/82094638/170090151-5f15868b-64ee-4a13-b0af-9ee4c94e4540.mov
+
+https://user-images.githubusercontent.com/82094638/187693918-b46a7dea-381b-48d8-85b7-39dca83a3f2a.mp4
+
 
 
 &nbsp;  
